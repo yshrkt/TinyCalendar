@@ -70,6 +70,10 @@ open class CalendarViewCell: UIView {
         }
     }
     
+    open var adjustsContentInsetAutomatically: Bool {
+        return true
+    }
+    
     // MARK: - Initializer
     public required override init(frame: CGRect) {
         super.init(frame: frame)

@@ -89,8 +89,9 @@ open class CalendarHeaderView: UIView {
         
         context.setStrokeColor(headerSeparatorStyle.color.cgColor)
         context.setLineWidth(headerSeparatorStyle.width)
-        context.move(to: CGPoint(x: adjust, y: self.bounds.height - headerSeparatorStyle.width.half + adjust))
-        context.addLine(to: CGPoint(x: self.bounds.width - adjust, y: self.bounds.height - headerSeparatorStyle.width.half + adjust))
+        let y = self.bounds.height - headerSeparatorStyle.width.half + adjust
+        context.move(to: CGPoint(x: adjust, y: y))
+        context.addLine(to: CGPoint(x: gridView.gridFrame.width - adjust, y: y))
         context.strokePath()
     }
 }

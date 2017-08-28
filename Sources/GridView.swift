@@ -128,8 +128,8 @@ class GridView: UIView {
             for i in 1..<numberOfRows {
                 let y = offset.y + cell.height * CGFloat(i)
                 context.beginPath()
-                context.move(to: CGPoint(x: offset.x - adjust, y: y + adjust))
-                context.addLine(to: CGPoint(x: offset.x + cell.width * numberOfColumns.cgFloat + adjust, y: y + adjust))
+                context.move(to: CGPoint(x: offset.x + adjust, y: y + adjust))
+                context.addLine(to: CGPoint(x: offset.x + cell.width * numberOfColumns.cgFloat - adjust, y: y + adjust))
                 context.strokePath()
             }
         }

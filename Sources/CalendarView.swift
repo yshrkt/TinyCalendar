@@ -156,7 +156,14 @@ open class CalendarView: UIView {
         dates.enumerated().forEach{
             dateIndexs[$0.element] = $0.offset
             let cell = cells[$0.offset]
-            cell.contentInset = UIEdgeInsets(top: separatorStyle.width, left: separatorStyle.width, bottom: 0.0, right: 0.0)
+            if cell.adjustsContentInsetAutomatically {
+                let row: Int = $0.offset / Constants.numberOfColumns
+                let col: Int = $0.offset % Constants.numberOfColumns
+                let top: CGFloat = (row == 0) ? 0.0 : separatorStyle.width
+                let left: CGFloat = (col == 0) ? 0.0 : separatorStyle.width
+                cell.contentInset = UIEdgeInsets(top: top, left: left,
+                                                 bottom: 0.0, right: 0.0)
+            }
             cell.isSelected = false
             cell.isHighlighted = false
             cell.isEnabled = true
@@ -232,12 +239,16 @@ open class CalendarView: UIView {
         outerlineFrame.size.width = gridView.gridFrame.width + outerlineStyle.width
         outerlineView.frame = outerlineFrame
         
+        headerCells.enumerated().forEach {
+            let cellFrame = headerView.cellFrame(at: $0.offset)
+            $0.element.frame = cellFrame
+        }
         
-        for (index, cell) in cells.enumerated() {
-            var cellFrame = gridView.cellAt(row: index/Constants.numberOfColumns, column: index%Constants.numberOfColumns)
+        cells.enumerated().forEach {
+            var cellFrame = gridView.cellAt(row: $0.offset/Constants.numberOfColumns, column: $0.offset%Constants.numberOfColumns)
             cellFrame.origin.x += gridView.frame.x
             cellFrame.origin.y += gridView.frame.y
-            cell.frame = cellFrame
+            $0.element.frame = cellFrame
         }
     }
     
@@ -343,7 +354,6 @@ fileprivate extension CalendarView {
         outerlineView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(outerlineView)
         self.outerlineView = outerlineView
-        outerlineView.isUserInteractionEnabled = false
         
         self.setNeedsLayout()
     }
@@ -411,7 +421,11 @@ fileprivate extension CalendarView {
                 }
             }()
             cell.frame = headerView.cellFrame(at: i)
-            cell.contentInset = UIEdgeInsets(top: separatorStyle.width, left: separatorStyle.width, bottom: 0.0, right: 0.0)
+            let left = (i == 0) ? 0.0 : separatorStyle.width
+            cell.contentInset = UIEdgeInsets(top: separatorStyle.width,
+                                             left: left,
+                                             bottom: headerSeparatorStyle.width.half,
+                                             right: 0.0)
             if let weekday = Weekday(rawValue: i + 1) {
                 cell.configure(with: weekday)
                 delegate?.calendarView(self, configureHeaderCellAtWeekday: weekday)
@@ -420,7 +434,7 @@ fileprivate extension CalendarView {
             headerView.addSubview(cell)
             headerCells.append(cell)
         }
-
+        contentView.bringSubview(toFront: outerlineView)
     }
     
     func configureCells() {
@@ -443,6 +457,7 @@ fileprivate extension CalendarView {
             contentView.addSubview(cell)
             cells.append(cell)
         }
+        contentView.bringSubview(toFront: outerlineView)
     }
 }
 
