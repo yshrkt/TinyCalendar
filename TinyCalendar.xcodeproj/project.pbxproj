@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9230D0811F4EF489000E8A9A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230D0801F4EF489000E8A9A /* CalendarView.swift */; };
+		9230D0831F4EF5C0000E8A9A /* CalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230D0821F4EF5C0000E8A9A /* CalendarViewCell.swift */; };
+		9230D0851F4EFE51000E8A9A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230D0841F4EFE51000E8A9A /* Utility.swift */; };
+		9230D0871F4F0920000E8A9A /* LineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230D0861F4F0920000E8A9A /* LineStyle.swift */; };
+		9266F81B1F51580F0067E687 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9266F81A1F51580F0067E687 /* GridView.swift */; };
+		92A22D451F515372003AD9D5 /* LineAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A22D441F515372003AD9D5 /* LineAxis.swift */; };
+		92D5B42C1F516FC500E80368 /* CalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B42B1F516FC500E80368 /* CalendarViewDataSource.swift */; };
+		92D5B42E1F51702C00E80368 /* CalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B42D1F51702C00E80368 /* CalendarViewDelegate.swift */; };
+		92D5B4301F5172DD00E80368 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B42F1F5172DD00E80368 /* CalendarDate.swift */; };
+		92D5B4321F5172E800E80368 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B4311F5172E800E80368 /* Weekday.swift */; };
+		92D5B4341F51753A00E80368 /* CalendarHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B4331F51753A00E80368 /* CalendarHeaderViewCell.swift */; };
+		92D5B4361F51A4BD00E80368 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B4351F51A4BD00E80368 /* CalendarHeaderView.swift */; };
+		OBJ_27 /* TinyCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* TinyCalendarTests.swift */; };
+		OBJ_29 /* TinyCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TinyCalendar.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9230D07F1F4EF454000E8A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_15;
+			remoteInfo = TinyCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9230D0801F4EF489000E8A9A /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		9230D0821F4EF5C0000E8A9A /* CalendarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewCell.swift; sourceTree = "<group>"; };
+		9230D0841F4EFE51000E8A9A /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		9230D0861F4F0920000E8A9A /* LineStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStyle.swift; sourceTree = "<group>"; };
+		9266F81A1F51580F0067E687 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		92A22D431F5150F0003AD9D5 /* TinyCalendar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = TinyCalendar.playground; path = Example/TinyCalendar.playground; sourceTree = "<group>"; };
+		92A22D441F515372003AD9D5 /* LineAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAxis.swift; sourceTree = "<group>"; };
+		92D5B42B1F516FC500E80368 /* CalendarViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDataSource.swift; sourceTree = "<group>"; };
+		92D5B42D1F51702C00E80368 /* CalendarViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDelegate.swift; sourceTree = "<group>"; };
+		92D5B42F1F5172DD00E80368 /* CalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
+		92D5B4311F5172E800E80368 /* Weekday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
+		92D5B4331F51753A00E80368 /* CalendarHeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHeaderViewCell.swift; sourceTree = "<group>"; };
+		92D5B4351F51A4BD00E80368 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		OBJ_11 /* TinyCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyCalendarTests.swift; sourceTree = "<group>"; };
+		OBJ_13 /* TinyCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TinyCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_14 /* TinyCalendarTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TinyCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_29 /* TinyCalendar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92A22D421F5150B5003AD9D5 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				92A22D431F5150F0003AD9D5 /* TinyCalendar.playground */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		OBJ_10 /* TinyCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* TinyCalendarTests.swift */,
+			);
+			name = TinyCalendarTests;
+			path = Tests/TinyCalendarTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* TinyCalendar.framework */,
+				OBJ_14 /* TinyCalendarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				92A22D421F5150B5003AD9D5 /* Example */,
+				OBJ_7 /* Sources */,
+				OBJ_9 /* Tests */,
+				OBJ_12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9230D0801F4EF489000E8A9A /* CalendarView.swift */,
+				92D5B42B1F516FC500E80368 /* CalendarViewDataSource.swift */,
+				92D5B42D1F51702C00E80368 /* CalendarViewDelegate.swift */,
+				9230D0821F4EF5C0000E8A9A /* CalendarViewCell.swift */,
+				92D5B4351F51A4BD00E80368 /* CalendarHeaderView.swift */,
+				92D5B4331F51753A00E80368 /* CalendarHeaderViewCell.swift */,
+				9266F81A1F51580F0067E687 /* GridView.swift */,
+				9230D0861F4F0920000E8A9A /* LineStyle.swift */,
+				92A22D441F515372003AD9D5 /* LineAxis.swift */,
+				9230D0841F4EFE51000E8A9A /* Utility.swift */,
+				92D5B42F1F5172DD00E80368 /* CalendarDate.swift */,
+				92D5B4311F5172E800E80368 /* Weekday.swift */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* TinyCalendarTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		OBJ_15 /* TinyCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_16 /* Build configuration list for PBXNativeTarget "TinyCalendar" */;
+			buildPhases = (
+				OBJ_19 /* Sources */,
+				OBJ_21 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyCalendar;
+			productName = TinyCalendar;
+			productReference = OBJ_13 /* TinyCalendar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		OBJ_22 /* TinyCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_23 /* Build configuration list for PBXNativeTarget "TinyCalendarTests" */;
+			buildPhases = (
+				OBJ_26 /* Sources */,
+				OBJ_28 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_30 /* PBXTargetDependency */,
+			);
+			name = TinyCalendarTests;
+			productName = TinyCalendarTests;
+			productReference = OBJ_14 /* TinyCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "TinyCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				OBJ_15 /* TinyCalendar */,
+				OBJ_22 /* TinyCalendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				9230D0851F4EFE51000E8A9A /* Utility.swift in Sources */,
+				92D5B4361F51A4BD00E80368 /* CalendarHeaderView.swift in Sources */,
+				9230D0831F4EF5C0000E8A9A /* CalendarViewCell.swift in Sources */,
+				9266F81B1F51580F0067E687 /* GridView.swift in Sources */,
+				9230D0811F4EF489000E8A9A /* CalendarView.swift in Sources */,
+				92D5B42C1F516FC500E80368 /* CalendarViewDataSource.swift in Sources */,
+				92D5B42E1F51702C00E80368 /* CalendarViewDelegate.swift in Sources */,
+				92D5B4321F5172E800E80368 /* Weekday.swift in Sources */,
+				9230D0871F4F0920000E8A9A /* LineStyle.swift in Sources */,
+				92D5B4341F51753A00E80368 /* CalendarHeaderViewCell.swift in Sources */,
+				92D5B4301F5172DD00E80368 /* CalendarDate.swift in Sources */,
+				92A22D451F515372003AD9D5 /* LineAxis.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_27 /* TinyCalendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_15 /* TinyCalendar */;
+			targetProxy = 9230D07F1F4EF454000E8A9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = TinyCalendar.xcodeproj/TinyCalendar_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TinyCalendar;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = TinyCalendar;
+			};
+			name = Debug;
+		};
+		OBJ_18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = TinyCalendar.xcodeproj/TinyCalendar_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TinyCalendar;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = TinyCalendar;
+			};
+			name = Release;
+		};
+		OBJ_24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = TinyCalendar.xcodeproj/TinyCalendarTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = TinyCalendarTests;
+			};
+			name = Debug;
+		};
+		OBJ_25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = TinyCalendar.xcodeproj/TinyCalendarTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = TinyCalendarTests;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_16 /* Build configuration list for PBXNativeTarget "TinyCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_17 /* Debug */,
+				OBJ_18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "TinyCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_23 /* Build configuration list for PBXNativeTarget "TinyCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_24 /* Debug */,
+				OBJ_25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
