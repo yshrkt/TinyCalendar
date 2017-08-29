@@ -129,20 +129,17 @@ open class CalendarViewCell: UIView {
     private func _commonInit() {
         self.backgroundColor = .clear
         let contentView = UIView(frame: .zero)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.frame = self.bounds.inset(by: contentInset)
         self.addSubview(contentView)
         self.contentView = contentView
         
         let dayLabel = UILabel(frame: .zero)
-        dayLabel.translatesAutoresizingMaskIntoConstraints = false
         dayLabel.frame = self.contentView.bounds
         self.contentView.addSubview(dayLabel)
         self.dayLabel = dayLabel
         
         let selectedBackgroundView = UIView(frame: .zero)
         selectedBackgroundView.backgroundColor = UIColor.lightGray
-        selectedBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         selectedBackgroundView.frame = self.contentView.bounds
         self.selectedBackgroundView = selectedBackgroundView
     }

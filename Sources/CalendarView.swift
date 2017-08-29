@@ -167,7 +167,7 @@ open class CalendarView: UIView {
             cell.isSelected = false
             cell.isHighlighted = false
             cell.isEnabled = true
-            delegate?.calendarView(self, willUpdateCellAtDate: $0.element)
+            let _ = delegate?.calendarView(self, willUpdateCellAtDate: $0.element)
             cell.update(with: $0.element)
             if $0.element.year == year && $0.element.month == month {
                 cell.setEnabled(true, animated: false)
@@ -185,7 +185,10 @@ open class CalendarView: UIView {
         guard let cell = cellForDate(date), !cell.isSelected else {
             return
         }
-        delegate?.calendarView(self, willSelectCellAtDate: date)
+        if let delegate = delegate, delegate.calendarView(self, willSelectCellAtDate: date) == nil {
+            return
+        }
+        
         cell.setSelected(true, animated: animated)
         delegate?.calendarView(self, didSelectCellAtDate: date)
     }
@@ -194,7 +197,9 @@ open class CalendarView: UIView {
         guard let cell = cellForDate(date), cell.isSelected else {
             return
         }
-        delegate?.calendarView(self, willDeselectCellAtDate: date)
+        if let delegate = delegate, delegate.calendarView(self, willDeselectCellAtDate: date) == nil {
+            return
+        }
         cell.setSelected(false, animated: animated)
         delegate?.calendarView(self, didDeselectCellAtDate: date)
     }
@@ -229,6 +234,8 @@ open class CalendarView: UIView {
             headerView.frame = headerFrame
             headerView.alpha = 0.0
         }
+        headerView.layoutIfNeeded()
+        
         var gridFrame = contentFrame
         gridFrame.origin.y = headerView.frame.maxY
         gridFrame.size.height -= headerView.frame.height + outerlineStyle.width.half
@@ -241,11 +248,13 @@ open class CalendarView: UIView {
         
         headerCells.enumerated().forEach {
             let cellFrame = headerView.cellFrame(at: $0.offset)
+            //print("header-cell: \(cellFrame)")
             $0.element.frame = cellFrame
         }
         
         cells.enumerated().forEach {
             var cellFrame = gridView.cellAt(row: $0.offset/Constants.numberOfColumns, column: $0.offset%Constants.numberOfColumns)
+            //print("cell: \(cellFrame)")
             cellFrame.origin.x += gridView.frame.x
             cellFrame.origin.y += gridView.frame.y
             $0.element.frame = cellFrame
@@ -335,23 +344,19 @@ fileprivate extension CalendarView {
         self.backgroundColor = .white
         
         let contentView = UIView(frame: .zero)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.frame = self.bounds.inset(by: contentInset)
         self.addSubview(contentView)
         self.contentView = contentView
         
         let headerView = CalendarHeaderView(frame: .zero)
-        headerView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(headerView)
         self.headerView = headerView
         
         let gridView = GridView(frame: .zero)
-        gridView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(gridView)
         self.gridView = gridView
         
         let outerlineView = GridView(frame: .zero)
-        outerlineView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(outerlineView)
         self.outerlineView = outerlineView
         

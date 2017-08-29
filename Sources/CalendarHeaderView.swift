@@ -100,7 +100,6 @@ fileprivate extension CalendarHeaderView {
     func _commonInit() {
         self.backgroundColor = .clear
         let gridView = GridView(frame: .zero)
-        gridView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(gridView)
         self.gridView = gridView
         

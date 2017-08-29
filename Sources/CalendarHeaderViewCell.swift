@@ -60,13 +60,11 @@ open class CalendarHeaderViewCell: UIView {
     private func _commonInit() {
         self.backgroundColor = .clear
         let contentView = UIView(frame: .zero)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.frame = self.bounds.inset(by: contentInset)
         self.addSubview(contentView)
         self.contentView = contentView
         
         let weekdayLabel = UILabel(frame: .zero)
-        weekdayLabel.translatesAutoresizingMaskIntoConstraints = false
         weekdayLabel.frame = self.contentView.bounds
         self.contentView.addSubview(weekdayLabel)
         self.weekdayLabel = weekdayLabel
