@@ -275,7 +275,7 @@ open class CalendarView: UIView {
     }
     
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesMoved(touches, with: event)
+        super.touchesMoved(touches, with: event)
         guard allowsSelection else {
             return
         }
@@ -294,7 +294,7 @@ open class CalendarView: UIView {
     }
     
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesEnded(touches, with: event)
+        super.touchesEnded(touches, with: event)
         guard allowsSelection else {
             return
         }
@@ -314,7 +314,7 @@ open class CalendarView: UIView {
     }
     
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesCancelled(touches, with: event)
+        super.touchesCancelled(touches, with: event)
         guard allowsSelection else {
             return
         }
