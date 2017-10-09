@@ -153,6 +153,7 @@ open class CalendarView: UIView {
         dateIndexs.removeAll()
         let dates = caleandarDatesAt(year: year, month: month)
         //print("\(dates)")
+        delegate?.calendarView(self, willUpdateCellsFor: dates)
         dates.enumerated().forEach{
             dateIndexs[$0.element] = $0.offset
             let cell = cells[$0.offset]
@@ -167,15 +168,16 @@ open class CalendarView: UIView {
             cell.isSelected = false
             cell.isHighlighted = false
             cell.isEnabled = true
-            let _ = delegate?.calendarView(self, willUpdateCellAtDate: $0.element)
+            let _ = delegate?.calendarView(self, willUpdateCellAt: $0.element)
             cell.update(with: $0.element)
             if $0.element.year == year && $0.element.month == month {
                 cell.setEnabled(true, animated: false)
             }else {
                 cell.setEnabled(false, animated: false)
             }
-            delegate?.calendarView(self, didUpdateCellAtDate: $0.element)
+            delegate?.calendarView(self, didUpdateCellAt: $0.element)
         }
+        delegate?.calendarView(self, didUpdateCellsFor: dates)
     }
     
     public func select(at date: CalendarDate, animated: Bool) {
@@ -185,23 +187,23 @@ open class CalendarView: UIView {
         guard let cell = cellForDate(date), !cell.isSelected else {
             return
         }
-        if let delegate = delegate, delegate.calendarView(self, willSelectCellAtDate: date) == nil {
+        if let delegate = delegate, delegate.calendarView(self, willSelectCellAt: date) == nil {
             return
         }
         
         cell.setSelected(true, animated: animated)
-        delegate?.calendarView(self, didSelectCellAtDate: date)
+        delegate?.calendarView(self, didSelectCellAt: date)
     }
     
     public func deselect(at date: CalendarDate, animated: Bool) {
         guard let cell = cellForDate(date), cell.isSelected else {
             return
         }
-        if let delegate = delegate, delegate.calendarView(self, willDeselectCellAtDate: date) == nil {
+        if let delegate = delegate, delegate.calendarView(self, willDeselectCellAt: date) == nil {
             return
         }
         cell.setSelected(false, animated: animated)
-        delegate?.calendarView(self, didDeselectCellAtDate: date)
+        delegate?.calendarView(self, didDeselectCellAt: date)
     }
     
     func didTap(sender: UITapGestureRecognizer) {
@@ -433,7 +435,7 @@ fileprivate extension CalendarView {
                                              right: 0.0)
             if let weekday = Weekday(rawValue: i + 1) {
                 cell.configure(with: weekday)
-                delegate?.calendarView(self, configureHeaderCellAtWeekday: weekday)
+                delegate?.calendarView(self, configureHeaderCellAt: weekday)
             }
             
             headerView.addSubview(cell)

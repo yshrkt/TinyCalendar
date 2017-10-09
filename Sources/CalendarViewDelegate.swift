@@ -9,43 +9,54 @@
 import UIKit
 
 public protocol CalendarViewDelegate: class {
-    func calendarView(_ calendarView: CalendarView, willUpdateCellAtDate date: CalendarDate) -> CalendarDate?
-    func calendarView(_ calendarView: CalendarView, didUpdateCellAtDate date: CalendarDate)
+    func calendarView(_ calendarView: CalendarView, willUpdateCellsFor dates: [CalendarDate])
+    func calendarView(_ calendarView: CalendarView, didUpdateCellsFor dates: [CalendarDate])
     
-    func calendarView(_ calendarView: CalendarView, willSelectCellAtDate date: CalendarDate) -> CalendarDate?
-    func calendarView(_ calendarView: CalendarView, didSelectCellAtDate date: CalendarDate)
+    func calendarView(_ calendarView: CalendarView, willUpdateCellAt date: CalendarDate) -> CalendarDate?
+    func calendarView(_ calendarView: CalendarView, didUpdateCellAt date: CalendarDate)
     
-    func calendarView(_ calendarView: CalendarView, willDeselectCellAtDate date: CalendarDate) -> CalendarDate?
-    func calendarView(_ calendarView: CalendarView, didDeselectCellAtDate date: CalendarDate)
+    func calendarView(_ calendarView: CalendarView, willSelectCellAt date: CalendarDate) -> CalendarDate?
+    func calendarView(_ calendarView: CalendarView, didSelectCellAt date: CalendarDate)
     
-    func calendarView(_ calendarView: CalendarView, configureHeaderCellAtWeekday weekday: Weekday)
+    func calendarView(_ calendarView: CalendarView, willDeselectCellAt date: CalendarDate) -> CalendarDate?
+    func calendarView(_ calendarView: CalendarView, didDeselectCellAt date: CalendarDate)
+    
+    func calendarView(_ calendarView: CalendarView, configureHeaderCellAt weekday: Weekday)
     
     func heightForHeaderView(in calendarView: CalendarView) -> CGFloat
 }
 
 public extension CalendarViewDelegate {
-    func calendarView(_ calendarView: CalendarView, willUpdateCellAtDate date: CalendarDate) -> CalendarDate? {
+    func calendarView(_ calendarView: CalendarView, willUpdateCellsFor dates: [CalendarDate]) {
+        
+    }
+    
+    func calendarView(_ calendarView: CalendarView, didUpdateCellsFor dates: [CalendarDate]) {
+        
+    }
+    
+    func calendarView(_ calendarView: CalendarView, willUpdateCellAt date: CalendarDate) -> CalendarDate? {
         return date
     }
-    func calendarView(_ calendarView: CalendarView, didUpdateCellAtDate date: CalendarDate) {
+    func calendarView(_ calendarView: CalendarView, didUpdateCellAt date: CalendarDate) {
     
     }
     
-    func calendarView(_ calendarView: CalendarView, willSelectCellAtDate date: CalendarDate) -> CalendarDate? {
+    func calendarView(_ calendarView: CalendarView, willSelectCellAt date: CalendarDate) -> CalendarDate? {
         return date
     }
-    func calendarView(_ calendarView: CalendarView, didSelectCellAtDate date: CalendarDate) {
+    func calendarView(_ calendarView: CalendarView, didSelectCellAt date: CalendarDate) {
     
     }
     
-    func calendarView(_ calendarView: CalendarView, willDeselectCellAtDate date: CalendarDate) -> CalendarDate? {
+    func calendarView(_ calendarView: CalendarView, willDeselectCellAt date: CalendarDate) -> CalendarDate? {
         return date
     }
-    func calendarView(_ calendarView: CalendarView, didDeselectCellAtDate date: CalendarDate) {
+    func calendarView(_ calendarView: CalendarView, didDeselectCellAt date: CalendarDate) {
     
     }
     
-    func calendarView(_ calendarView: CalendarView, configureHeaderCellAtWeekday weekday: Weekday) {
+    func calendarView(_ calendarView: CalendarView, configureHeaderCellAt weekday: Weekday) {
     
     }
     

@@ -13,7 +13,6 @@
 		9230D0871F4F0920000E8A9A /* LineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230D0861F4F0920000E8A9A /* LineStyle.swift */; };
 		9266F81B1F51580F0067E687 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9266F81A1F51580F0067E687 /* GridView.swift */; };
 		92A22D451F515372003AD9D5 /* LineAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A22D441F515372003AD9D5 /* LineAxis.swift */; };
-		92D5B42C1F516FC500E80368 /* CalendarViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B42B1F516FC500E80368 /* CalendarViewDataSource.swift */; };
 		92D5B42E1F51702C00E80368 /* CalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B42D1F51702C00E80368 /* CalendarViewDelegate.swift */; };
 		92D5B4301F5172DD00E80368 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B42F1F5172DD00E80368 /* CalendarDate.swift */; };
 		92D5B4321F5172E800E80368 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5B4311F5172E800E80368 /* Weekday.swift */; };
@@ -39,9 +38,8 @@
 		9230D0841F4EFE51000E8A9A /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		9230D0861F4F0920000E8A9A /* LineStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStyle.swift; sourceTree = "<group>"; };
 		9266F81A1F51580F0067E687 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		92A22D431F5150F0003AD9D5 /* TinyCalendar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = TinyCalendar.playground; path = Example/TinyCalendar.playground; sourceTree = "<group>"; };
+		92A22D431F5150F0003AD9D5 /* TinyCalendar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = TinyCalendar.playground; path = Example/TinyCalendar.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		92A22D441F515372003AD9D5 /* LineAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAxis.swift; sourceTree = "<group>"; };
-		92D5B42B1F516FC500E80368 /* CalendarViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDataSource.swift; sourceTree = "<group>"; };
 		92D5B42D1F51702C00E80368 /* CalendarViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDelegate.swift; sourceTree = "<group>"; };
 		92D5B42F1F5172DD00E80368 /* CalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
 		92D5B4311F5172E800E80368 /* Weekday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				9230D0801F4EF489000E8A9A /* CalendarView.swift */,
-				92D5B42B1F516FC500E80368 /* CalendarViewDataSource.swift */,
 				92D5B42D1F51702C00E80368 /* CalendarViewDelegate.swift */,
 				9230D0821F4EF5C0000E8A9A /* CalendarViewCell.swift */,
 				92D5B4351F51A4BD00E80368 /* CalendarHeaderView.swift */,
@@ -208,7 +205,6 @@
 				9230D0831F4EF5C0000E8A9A /* CalendarViewCell.swift in Sources */,
 				9266F81B1F51580F0067E687 /* GridView.swift in Sources */,
 				9230D0811F4EF489000E8A9A /* CalendarView.swift in Sources */,
-				92D5B42C1F516FC500E80368 /* CalendarViewDataSource.swift in Sources */,
 				92D5B42E1F51702C00E80368 /* CalendarViewDelegate.swift in Sources */,
 				92D5B4321F5172E800E80368 /* Weekday.swift in Sources */,
 				9230D0871F4F0920000E8A9A /* LineStyle.swift in Sources */,
