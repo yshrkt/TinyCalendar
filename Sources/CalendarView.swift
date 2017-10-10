@@ -288,6 +288,8 @@ open class CalendarView: UIView {
     open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         guard allowsSelection else {
+            touchedCell?.setHighlighted(false, animated: true)
+            touchedCell = nil
             return
         }
         guard let touch = touches.first else {
@@ -307,6 +309,8 @@ open class CalendarView: UIView {
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         guard allowsSelection else {
+            touchedCell?.setHighlighted(false, animated: true)
+            touchedCell = nil
             return
         }
         for cell in cells where cell.isEnabled {
@@ -327,6 +331,8 @@ open class CalendarView: UIView {
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         guard allowsSelection else {
+            touchedCell?.setHighlighted(false, animated: true)
+            touchedCell = nil
             return
         }
         for cell in cells where cell.isEnabled  {
