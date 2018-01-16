@@ -15,7 +15,17 @@ public struct CalendarDate {
     public let weekday: Weekday
     
     public static func today() -> CalendarDate? {
-        let date = Date()
+        return CalendarDate(with: Date())
+    }
+    
+    public init(year: Int, month: Int, day: Int, weekday: Weekday) {
+        self.year = year
+        self.month = month
+        self.day = day
+        self.weekday = weekday
+    }
+    
+    public init?(with date: Date) {
         let calendar = Calendar(identifier: .gregorian)
         let dateComponents = calendar.dateComponents([.year, .month, .day, .weekday], from: date)
         guard let year = dateComponents.year,
@@ -25,7 +35,10 @@ public struct CalendarDate {
             let weekday = Weekday(rawValue: wd)else {
                 return nil
         }
-        return CalendarDate(year: year, month: month, day: day, weekday: weekday)
+        self.year = year
+        self.month = month
+        self.day = day
+        self.weekday = weekday
     }
 }
 

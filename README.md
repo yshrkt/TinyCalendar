@@ -23,6 +23,15 @@ Changes year/month as bellow:
 calendarView.update(year: 2017, month: 10)
 ```
 
+Also you can customize calendar cell just like UITableViewCell's cell.
+```swift
+calendarView.registerHeaderCell(CustomHeaderCell.self)
+calendarView.registerCell(CustomCell.self)
+```
+Please see the details in TinyCalendar.playground.
+
+![example1](https://github.com/yshrkt/TinyCalendar/blob/master/images/example1.png)
+
 ## Installation
 
 ### Carthage
