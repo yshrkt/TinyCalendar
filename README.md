@@ -30,7 +30,7 @@ calendarView.registerCell(CustomCell.self)
 ```
 Please see the details in TinyCalendar.playground.
 
-![example1](https://github.com/yshrkt/TinyCalendar/blob/master/images/example1.png)
+![example1](https://github.com/yshrkt/TinyCalendar/blob/master/Images/example1.png)
 
 ## Installation
 
